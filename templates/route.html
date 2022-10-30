@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% set active_page = "index" %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="route-center">
+  <h1><u>Date:</u> {{ route.date }}</h1>
+  <br>
+  <h3><u>{{ route.start_point }}</u>   ➩	  <u>{{  route.end_point }}</u></h3>
+  <hr>
+    <img class="route-img" src="{{ route.map_url }}" width="700" height="500">
+  <hr>
+  <h3><u>Travel Type:</u> {{ route.travel_type }}</h3>
+  <h3><u>Distance:</u> {{ route.mileage }} mi</h3>
+  <h3><u>Expense payout:</u> {{ payout }}$</h3>
+  <h3><u>Comments:</u> {{ route.comments }}</h3>
+  </div>
+</div>
+
+<p><a class="btn btn-primary" href="/routes">Go Back</a></p>
+
+{% endblock %}
