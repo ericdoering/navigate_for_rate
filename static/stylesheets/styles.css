@@ -1,0 +1,27 @@
+
+
+.route-img {
+    border-radius: 20px;
+}
+
+.flashes {
+    opacity: 0.5;
+}
+
+.route-center {
+    text-align: center;
+}
+
+#ui {
+    font-family: 'Roboto', sans-serif;
+}
+
+#background {
+    background-image: url("https://www.forthepeople.com/sites/default/files/wp-content/uploads/2016/09/tips-driving-nyc-photo.jpg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+

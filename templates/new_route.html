@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% set active_page = "index" %}
+
+{% block title %}
+Add Route
+{% endblock %}
+
+{% block content %}
+
+<h5>Address Format: <u>15 Barclay St Manhattan, NY</u></h5>
+<hr>
+
+<form method="POST">
+    {{form.hidden_tag()}}
+
+    {% for field in form.errors %}
+    <div class="alert alert-danger">{{field}}:  
+        <ul>
+            {% for error in form.errors[field] %} 
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+
+    {% for field in form if field.widget.input_type != "hidden" %}
+
+    <div class="form-group row"> 
+        {{field.label(class="col-sm-2 col-form-label")}}
+        <div class="form-group row">
+            {{field(class="form-control")}}
+        </div>
+    </div>
+
+    {% endfor %}
+   
+<button type="submit" class="btn btn-primary">Add Route</button>
+
+{% endblock %}
