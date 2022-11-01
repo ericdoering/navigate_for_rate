@@ -1,19 +1,39 @@
 
+.route-info {
+    margin: 20px;
+}
 
 .route-img {
     border-radius: 20px;
 }
 
 .flashes {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .route-center {
     text-align: center;
 }
 
+#title {
+    color: rgb(249, 249, 249);
+}
+
+#jumbotron {
+    background-color: rgb(231, 229, 229);
+}
+
+#delete-button {
+    margin: 2px;
+}
+
+#edit-button {
+    margin: 2px;
+}
+
 #ui {
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(0, 0, 0);
 }
 
 #background {
@@ -25,3 +45,7 @@
     position: relative;
 }
 
+#info {
+    text-indent: 50px;
+    font-size: small;
+}

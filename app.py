@@ -195,4 +195,29 @@ def delete_route(route_id):
     return redirect("/routes")
 
 
+@app.route("/routes/<int:route_id>/edit", methods=["GET", "POST"])
+def edit_route(route_id):
+    """Allows a user to edit a route"""
+
+    route = Route.query.get(route_id)
+
+    if "username" not in session:
+        raise Unauthorized()
+
+    form = RouteForm(obj=route)
+
+    if form.validate_on_submit():
+        route.start_point = form.start_point.data
+        route.end_point = form.end_point.data
+        route.travel_type = form.travel_type.data
+        route.comments = form.comments.data
+
+        db.session.commit()
+        flash("Route edited.")
+        
+        return redirect("/routes")
+
+    return render_template("edit_route.html", form=form, route=route)
+
+
 
