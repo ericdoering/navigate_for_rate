@@ -13,7 +13,10 @@
     <div>
         <a href="/routes/{{route.id}}">{{ route.date }}</a>
                     <a method="POST" href="/routes/{{ route.id }}/delete">
-                        <button id="delete-button" class="btn btn-danger float-right">X</button>
+                        <button id="delete-button" class="btn btn-danger btn-sm float-right">Delete</button>
+                    </a>
+                    <a method="POST" href="/routes/{{ route.id }}/edit">
+                    <button id="edit-button" class="btn btn-primary btn-sm float-right">Edit</button>
                     </a>
                     <br>{{ route.comments }}
     </div>
