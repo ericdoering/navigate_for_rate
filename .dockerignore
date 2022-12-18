@@ -1,0 +1,4 @@
+# flyctl launch added from .gitignore
+**/key.py
+**/.python-version
+

@@ -7,7 +7,7 @@ from requests import delete
 from sqlalchemy import delete
 from sqlalchemy.exc import IntegrityError
 
-from key import API_SECRET_KEY
+from key import API_SECRET_KEY, SECRET_KEY
 
 from navigation import api_details, rate_multipler
 from models import db, connect_db, User, Route 
@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///routes'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = "NavigateForRate123$"
+app.config['SECRET_KEY'] = SECRET_KEY
 
 connect_db(app)
 db.create_all()
